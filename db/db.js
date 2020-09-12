@@ -5,11 +5,11 @@ const mySqlConnection = mysql.createConnection({
 
 host: "sql12.freemysqlhosting.net",
 
-user: "sql12330963",
+user: "sql12365075",
 
-password: "YKsJX1VV79",
+password: "tjFVGAFuEI",
 
-database: "sql12330963"
+database: "sql12365075"
 
 });
 
