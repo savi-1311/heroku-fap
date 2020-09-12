@@ -1,0 +1,107 @@
+body{
+    background-image : url(/images/rating-img.jpg);
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.zone {
+    /*padding:30px 50px;*/
+    color:#FFF;
+    font-size:2em;
+    border-radius:10px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    /* -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px; */
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/***********************************************************************
+ *  Green Background
+ **********************************************************************/
+ .green {
+    background: #56B870; /* Old browsers */
+    background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#56B870), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
+    background: linear-gradient(top, rgb(42, 231, 93) 0%,#a5c956 100%); /* W3C */
+}
+.div{
+    z-index : -1;
+    width : 100%;
+    margin-top : 170px;
+    margin-bottom: 140px;
+    display : flex;
+    flex-direction : column;
+    flex-wrap : wrap;
+    justify-content : center;
+    align-items: center;
+    opacity : 0.9;
+}
+.a{
+    text-align: center;
+    border : 2px solid white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size : 0.8em ;
+    border-radius: 5px;
+    margin-top : 15px;
+    margin-bottom : 15px;
+    padding : 20px;
+}
+.b{
+    text-align: center;
+    border : 2px solid white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size : 1.2em ;
+    border-radius: 5px;
+    margin-top : 15px;
+    margin-bottom : 15px;
+    padding : 40px;
+
+}
+.logout{
+    background-color: rgb(236, 70, 19); 
+    color: WHITE; 
+    border: 3px solid white;
+    padding: 25px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.65em;
+    margin-left : 13px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;;
+  }
+  .logout:hover{
+    background-color: #eeeded ;
+    color: black;
+  }
+  .menu{
+    background-color: rgb(162, 201, 20); 
+    color: WHITE; 
+    border: 3px solid white;
+    padding: 25px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.65em;
+    margin : 0 0 10px 40px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;;
+  }
+  .menu:hover{
+    background-color: #eeeded ;
+    color: black;
+  }

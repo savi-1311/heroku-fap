@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="/css/Menu.css">
+<div class="image-container">
+  <div class="text"><%= user2.resname %></div>
+</div>
+<div id="navbar">
+  <a href="/dashboard2">Go Back</a>
+  <a onclick="addDish(0,<%=i+1%>)")>Add Dish</a>
+  </div>
+</div>
+<div class="Menu-Box" id="MenuContainer">
+<% let title="add dish"; %>
+<%= typeof msg != 'undefined' ? msg : '' %>
+    <%for(var i=0;i<Menu.length;i++){%>
+    <div class="card-box">
+      <div class="info-column">
+        <%if (Menu[i].cusine === "indian") { %>
+        <img src="/images/img31.jpg"><br>
+        <% } %>
+        <%if (Menu[i].cusine === "italian") { %>
+        <img src="/images/img32.jpg"><br>
+        <% } %>
+        <%if (Menu[i].cusine === "chinese") { %>
+        <img src="/images/img33.png"><br>
+        <% } %>
+        <br>
+        <span><b><%= Menu[i].dishname%></b></span>
+        <span><p><b>Price:</b> Rs.</span>
+        <span><%= Menu[i].dishprice%></p></span>
+      </div>
+      <div class="info-column">
+        <span><p><b>Category: </b></span>
+        <span><%= Menu[i].category%></p></span>
+      </div>
+      <div class="info-column">
+        <span><p><b>Cuisine: </b></span>
+        <span><%= Menu[i].cusine%></p></span>
+      </div>
+      <div class="info-column">
+        <p><b>Type: </b>
+          <%if (Menu[i].foodtype === "veg") { %>
+            Vegetarian</p><br>
+            <% } %>
+            <%if (Menu[i].foodtype === "non-veg") { %>
+            Non-Vegetarian</p><br>
+            <% } %>
+      </div>
+      <button class="button1" onclick="addDish(0,<%=i%>);">Edit</button>
+      <a href="/user2/Menu/delete/<%= Menu[i].dishno %>"><button class="button1">Delete</button></a>
+    </div>
+    <%}%>
+  </div>
+
+
+  <div class="modaltop">
+  <div class="modal-container" style="display: none;" id="modal-container">
+    <div class="modal">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <div class="modal-header">
+      <span><h3 style="color: white;" id="form-title"></h3></span>
+      </div>
+      <form class="modal-form" method="POST" action="/user2/Menu">
+        <div>
+          <label><div class="Label">Dish Name : </div></label><br>
+          <input
+            type="text"
+            name="dishname"
+            id="dishname"
+            placeholder="Enter Dish Name"
+          />
+        </div><br>
+        <div>
+        <label><div class="Label"> Dish Price: </div></label><br>
+        <input
+          type="text"
+          name="dishprice"
+          id="dishprice"
+          placeholder="Enter Dish Price"
+        />
+      </div><br>
+      <div>
+      <label><div class="Label">Dish Cuisine: </div>
+        <div class="option"><input type="radio" name="cusine" class= "cusine" value="indian" checked> Indian
+        <input type="radio" name="cusine" class= "cusine"  value="chinese"  > Chinese
+        <input type="radio" name="cusine" class= "cusine"  value="italian">Italian</div> <br>
+     </label>
+      </div>
+      <div>
+      <label><div class="Label">Dish Category:</div> 
+        <div class="option"><input type="radio" name="category" class= "category" value="starter" checked> Starters
+        <input type="radio" name="category" class= "category"  value="main course"> Main Course
+        <input type="radio" name="category" class= "category"  value="dessert"> Desserts And Refreshments</div><br>
+     </label>
+      </div>
+      <div>
+      <label><div class="Label">Dish Type:</div> 
+        <div class="option"><input type="radio" name="foodtype" class= "foodtype"  value="veg" checked>Vegetarian
+        <input type="radio" name="foodtype" class= "foodtype"  value="non-veg"> Non-Vegetarian</div>
+     </label>
+      </div>
+      <button type="submit" class="button">Save</button>
+      </form>
+    </div>
+  </div>
+  </div>
+    
+
+
+<script>const addDish = (val,i) => {
+  const title = document.getElementById('form-title');
+  if(!val){
+    title.innerHTML= "Add Dish";
+    const modal = document.getElementById("modal-container");
+    modal.style.display = "flex";
+    modal.style.animation = "modalFadeIn 0.5s";
+    document.getElementById("dishname").setAttribute("value", <%- JSON.stringify(Menu) %>[i].dishname);
+    document.getElementById("dishprice").setAttribute("value", <%- JSON.stringify(Menu) %>[i].dishprice);
+    document.getElementsByClassName("cusine").setAttribute("value", <%- JSON.stringify(Menu) %>[i].cusine);
+    document.getElementsByClassName("category").setAttribute("value", <%- JSON.stringify(Menu) %>[i].category);
+    document.getElementsByClassName("dishtype").setAttribute("value", <%- JSON.stringify(Menu) %>[i].foodtype);
+    const form = document.getElementsByTagName("form")[0];
+    form.action = `/user2/Menu/${<%- JSON.stringify(Menu) %>[i].dishno}`
+  }
+  else{
+    title.innerHTML= "Add Dish";
+    document.getElementById("dishname").setAttribute("value", '');
+    document.getElementById("dishprice").setAttribute("value", '');
+    document.getElementsByClassName("cusine").setAttribute("value", '');
+    document.getElementsByClassName("category").setAttribute("value", '');
+    document.getElementsByClassName("foodtype").setAttribute("value", '');
+    const form = document.getElementsByTagName("form")[0];
+    form.action = `/user2/Menu`
+    
+
+    const modal = document.getElementById("modal-container");
+    modal.style.display = "flex";
+    modal.style.animation = "modalFadeIn 0.5s";
+
+  }
+  }
+  const closeModal = () => {
+    const modal = document.getElementById("modal-container");
+    modal.style.animation = "modalFadeOut 0.5s";
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 400);
+  }
+  window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    </script>

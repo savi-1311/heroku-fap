@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="/css/rating-style.css">
+    <nav class="zone green sticky">
+        <ul class="main-nav">
+            <li class="resize-icon"><a class="navbar-brand" href="/">
+              <div class="logo-image">
+                <FIGURE>
+                    <img src="/images/Fapino_text_whitebg2.jpg" alt="FAPINO : A FOOD TRAP" class="img-fluid">
+                    <figcaption class="resizethis"><b>FAPINO : A FOOD TRAP</b> </figcaption>
+                  </FIGURE>
+              </div>
+        </li>
+            <li class="push1"><a href=""><b>Hello <%= user1.name%> !</b></a></li>
+        <!-- <li class="push2"><a href=""><b></b></a></li> -->
+        <li class="push"><a href=""><b>Address:  <%= user1.address%></b></a></li>
+    </ul>
+    </nav>
+ <div class="green zone flex-container">
+        <div class="dishname"><h3>Dish Name: <%= Menu[0].dishname%></h3></div>
+        <div class="dishprice"><h3>Dish Price: Rs. <%= Menu[0].dishprice%></h3></div>
+        
+        <div class="slidecontainer"><form method="post" action="/user1/cart/pay/rating<%= Menu[0].dishno%>" id="rating">
+            <lable>
+            <input type="range" min="0" max="5" value="5" class="slider" id="myRange" name="rating">
+            </lable><br>
+            <input type="submit" value="LOVE IT?? RATE IT TO THE MAX!!!" class="rate">
+        </form>
+          </div>
+        <div><a href="/user1/cart/pay/ratinglist">
+            <button type="button" class="cancelbtn" herf="/user1/cart/pay/ratinglist">GO BACK</button></div></a>
+    </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+             output.innerHTML = this.value;
+            }
+        </script>

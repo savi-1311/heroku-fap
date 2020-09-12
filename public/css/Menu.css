@@ -1,0 +1,260 @@
+body{
+    background: url('/images/bg10.jpg') no-repeat;
+	height:100%;
+	background-attachment: fixed; 
+    background-position: center;
+	background-size: cover;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#navbar {
+  display: flex;
+  overflow: hidden;
+  background-color:darkcyan;
+  border : 2px solid white;
+  justify-content: center;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-size: 25px;
+}
+#navbar a .icon1{
+  height: 20px;
+  width: 20px;
+}
+
+#navbar a:hover {
+    background-color: midnightblue;
+  color: white;
+  font-size: 25px;
+  padding: 10px 24px;
+  border : 2px solid white;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.image-container {
+  background-image: url("/images/res3.jpg"); /* The image used - important! */
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */ /* Some height */
+  height: 500px;
+}
+
+.text {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  opacity: 0.9;
+  font-size: 8vw; /* Responsive font size */
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 100%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+.Menu-Box{
+    display: inline-block;
+    top: 65%;
+    width: 60%;
+    padding: 2%;
+    background-color: rgba(60,179,113,0.8);
+    text-align: center;
+    align-items: center;
+    border-radius: 1%;
+}
+
+.card-box{
+  border: solid 5px white;
+    margin: 1%;
+    padding: 2%;
+    display: inline-block;
+	width: 30%;
+	min-width: 350px;
+	color: white;
+	top:65%;
+    left:50%;
+    border-radius: 2.5%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+p{
+  font-size: 20px;
+  color: white;
+}
+h2 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 35px;
+    padding: 10px 24px;
+    border : 2px solid white;
+}
+b{
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+h3{
+    font-weight: normal;
+    font-size: 18px;
+    color:black;
+}
+
+.button{
+    background-color: darkcyan;
+    font-size: 20px;
+    color: white;
+    padding: 10px 24px;
+    border : 2px solid white;
+    border-radius: 2.5%;
+}
+.button1{
+    background-color: tomato;
+    font-size: 20px;
+    color: white;
+    padding: 2%;
+    margin: 1%;
+    border : 2px solid white;
+    border-radius: 2.5%;
+}
+input[type=submit]{
+    background-color: #4CAF50;
+    border: solid white 2px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.modal-container{
+    padding: 1%;
+    position: fixed;
+    bottom: 0;
+    left: 33%;
+    background-color: #fefefe;
+    border: solid 2px crimson;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.modal-header{
+    background-color: tomato;
+    color: white;
+    font-size: 20px;
+    padding: 0.1%;
+    margin: 1%;
+}
+.info-column .icon{
+  position: relative;
+  height: 20px;
+  width: 20px;
+  bottom: -5px;
+}
+  .button:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .button1:hover {
+    cursor: pointer;
+    background-color: white;
+    border: solid 2px black;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .close {
+    position: relative;
+    bottom: 4.5%;
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-form input[type="text"]
+{
+  text-align: center;
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	color: black;
+	font-size: 16px;
+	width: 100%;
+}
+
+img {
+    border: 5px solid white;
+    border-radius: 1%;
+    width: 250px;
+  }
+
+  .Label{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .options{
+    color: black;
+    font-size:18px;
+  }
+
+
+  @keyframes modalFadeIn {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes modalFadeOut {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,62 @@
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+<a href='/user2/login'><button><b>I'm A Restaurant Owner!</b></button></a><br>
+    <form method="post" action="/user1/login" id="login1">
+        <div class="imgcontainer">
+            <img src="/images/LOGIN_IMG.JPG" alt="Avatar" class="loginimg">
+          </div>
+          <div class = "heading">
+            <h1><b>Feeling hungry !!! <br> Login and be a part of FAP fam!!</b></h1>
+            </div>
+		<div class="container">
+		
+            <label><B>Email:</B>
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </label><br>
+
+
+			
+			<label><B>Password:</B>
+                <input type="Password" name="password" placeholder="Enter Password" required>
+            </label><br>
+			
+            <button type="submit"><b>Login</b></button> 
+		
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <a href="/"><button type="button" class="cancelbtn">Cancel</button></a>
+            </div>
+</form>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Oops! Password Incorrect</p>
+      <p>Please Login Again.</p>
+    </div>
+  
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+      modal.style.display = "block";
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>

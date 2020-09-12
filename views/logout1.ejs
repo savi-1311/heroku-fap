@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="/css/ratinglist.css">
+<nav class="zone green sticky">
+    <ul class="main-nav">
+        <li class="resize-icon"><a class="navbar-brand" href="/">
+          <div class="logo-image">
+            <FIGURE>
+                <img src="/images/Fapino_text_whitebg2.jpg" alt="FAPINO : A FOOD TRAP" class="img-fluid">
+                <figcaption class="resizethis"><b>FAPINO : A FOOD TRAP</b> </figcaption>
+              </FIGURE>
+          </div>
+    </li>
+        <li class="push1"><a href=""><b>Hello <%= user1.name%> !</b></a></li>
+        <!-- <li class="push2"><a href=""><b></b></a></li> -->
+        <li class="push"><a href=""><b>Address:  <%= user1.address%></b></a></li>
+</ul>
+</nav>
+<div class="green zone flex-container">
+    <a href="/user1/logout"><button class="button">LOGOUT</button></a>
+     
+</div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>You Need To Logout First!</p>
+    </div>
+  
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+      modal.style.display = "block";
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+      
+    

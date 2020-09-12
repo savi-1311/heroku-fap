@@ -1,0 +1,139 @@
+<link rel="stylesheet" type="text/css" href="/css/restaurant.css">
+  <div class="image-container">
+    <div class="text"><%= user2[0].resname %></div>
+  </div>
+
+  <div id="navbar">
+    <a href="#starter">Starters</a>
+    <a href="#Main Course">Main Course</a>
+    <a href="#Dessert">Dessert And Refreshments</a>
+    <a href="#Order" class="Now">Order Now</a>
+  </div>
+
+<div class="menubox">
+    <h2 id="starter">Starters: </h2>
+    <%for(var i=0;i<Menu.length ;i++){%>
+        <%if (Menu[i].category==="starter") { %>
+   <div class="box-zone">
+    <form method="post" action="/user1/cart" id="register1">
+        <img src="/images/img8.jpg">
+    <h3> <%= Menu[i].dishname%> </br>  Price: <%= Menu[i].dishprice%></br> Rating: <%= Menu[i].ratingdish%>/5</h3>
+    <label><h3>Quantity:</h3>
+      <div class="input-group">
+        <input type="button" value="-" class="button-minus" data-field="quantity">
+        <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+        <input type="button" value="+" class="button-plus" data-field="quantity">
+      </div>
+        </label>
+        <input type="hidden" name="dishname" value="<%= Menu[i].dishname%>">
+        <input type="hidden" name="dishprice" value="<%= Menu[i].dishprice%>">
+        <input type="hidden" name="dishno" value="<%= Menu[i].dishno%>">
+        <br>
+        <input type="submit" value="Add To Cart">
+    </form>
+  </div>
+ <% } %>
+ <% } %>
+ <br><br>
+ <h2 id="Main Course">Main Course:</h2>
+ <%for(var i=0;i<Menu.length ;i++){%>
+    <%if (Menu[i].category==="main course") { %>
+<div class="box-zone">
+ <form method="post" action="/user1/cart" id="register1">
+    <img src="/images/img4 (2).jpg">
+ <h3><%= Menu[i].dishname%> </br>  Price: <%= Menu[i].dishprice%></br> Rating: <%= Menu[i].ratingdish%>/5</h3>
+ <label><h3>Quantity:</h3>
+  <div class="input-group">
+    <input type="button" value="-" class="button-minus" data-field="quantity">
+    <input type="number" step="1" min="0" value="1" name="quantity" class="quantity-field">
+    <input type="button" value="+" class="button-plus" data-field="quantity">
+  </div>
+     </label>
+     <input type="hidden" name="dishname" value="<%= Menu[i].dishname%>">
+     <input type="hidden" name="dishprice" value="<%= Menu[i].dishprice%>">
+     <input type="hidden" name="dishno" value="<%= Menu[i].dishno%>">
+     <br>
+     <input type="submit" value="Add To Cart">
+ </form>
+</div>
+<% } %>
+<% } %>
+<br><br>
+<h2 id="Dessert">Dessert And Refreshments: </h2>
+<%for(var i=0;i<Menu.length ;i++){%>
+    <%if (Menu[i].category==="dessert") { %>
+<div class="box-zone">
+<form method="post" action="/user1/cart" id="register1">
+    <img src="/images/img30.jpg">
+<h3><%= Menu[i].dishname%> </br>  Price: <%= Menu[i].dishprice%></br> Rating: <%= Menu[i].ratingdish%>/5</h3>
+<label><h3>Quantity:</h3>
+  <div class="input-group">
+    <input type="button" value="-" class="button-minus" data-field="quantity">
+    <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+    <input type="button" value="+" class="button-plus" data-field="quantity">
+  </div>
+    </label>
+    <input type="hidden" name="dishname" value="<%= Menu[i].dishname%>">
+    <input type="hidden" name="dishprice" value="<%= Menu[i].dishprice%>">
+    <input type="hidden" name="dishno" value="<%= Menu[i].dishno%>">
+    <br>
+    <input type="submit" value="Add To Cart">
+</form>
+</div>
+<% } %>
+<% } %>
+<br><br>
+<a href='/user1/cart'><button class="Now" id="Order">ORDER NOW</button></a><br>
+</div>
+ 
+<br>
+
+<script>
+    function incrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal)) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+function decrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal) && currentVal > 0) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+$('.input-group').on('click', '.button-plus', function(e) {
+  incrementValue(e);
+});
+
+$('.input-group').on('click', '.button-minus', function(e) {
+  decrementValue(e);
+});
+
+window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+

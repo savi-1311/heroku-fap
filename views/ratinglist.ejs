@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/css/ratinglist.css">
+<nav class="zone green sticky">
+    <ul class="main-nav">
+        <li class="resize-icon"><a class="navbar-brand" href="/">
+          <div class="logo-image">
+            <FIGURE>
+                <img src="/images/Fapino_text_whitebg2.jpg" alt="FAPINO : A FOOD TRAP" class="img-fluid">
+                <figcaption class="resizethis"><b>FAPINO : A FOOD TRAP</b> </figcaption>
+              </FIGURE>
+          </div>
+    </li>
+        <li class="push1"><a href=""><b>Hello <%= user1.name%> !</b></a></li>
+        <!-- <li class="push2"><a href=""><b></b></a></li> -->
+        <li class="push"><a href=""><b>Address:  <%= user1.address%></b></a></li>
+</ul>
+</nav>
+<div class="green zone flex-container">
+    <%for(var i=0;i<cart.length;i++){%>
+    <div class ="orderinfo">
+    <h2><%= i+1 %>.  <%= cart[i].dishname %></h2>
+</div>
+    <a href="/user1/cart/pay/rating<%= cart[i].dishno %>"><button class="button">RATE</button></a>
+     
+    <% } %>
+    
+    <form method="post" action="/user1/cart/pay/complete" id="complete">
+        <input type="submit" value="ORDER COMPLETE" class="ordercomplete">
+    </form>
+</div>
+      
+    

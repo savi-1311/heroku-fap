@@ -1,0 +1,249 @@
+body{
+    background: url('/images/bg9.jpg') no-repeat;
+	height:100%;
+	background-attachment: fixed; 
+    background-position: center;
+	background-size: cover;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.image-container {
+  background-image: url("/images/res3.jpg"); /* The image used - important! */
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */ /* Some height */
+  height: 500px;
+  width: 100%;
+}
+
+.text {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  opacity: 0.9;
+  font-size: 8vw; /* Responsive font size */
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 100%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+
+.menubox{
+    display: inline-block;
+    top: 65%;
+    width: 80%;
+    padding: 2%;
+    background-color: rgba(60,179,113,0.8);
+    background-image: linear-gradient ( rgba(60,179,113,0.8), rgba(154,205,50));
+    text-align: center;
+    align-items: center;
+    border-radius: 1%;
+}
+
+.box-zone{
+  font-size: 20px;
+    margin: 1%;
+    padding: 2%;
+    display: inline-block;
+	 width: 30%;
+	 min-width: 350px;
+   color: white;
+   border: solid white 5px;
+	  top:65%;
+    left:50%;
+    border-radius: 2.5%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.box-zone:hover {
+  /* -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg); */
+  transform: scale(1.1);
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  transition: all 0.5s linear;
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    padding: 10px 24px;
+    border : 2px solid white;
+}
+.button{
+    background-color: darkcyan;
+    font-size: 20px;
+    color: white;
+    padding: 10px 24px;
+    border : 2px solid white;
+    border-radius: 5%;
+}
+
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  color: white;
+  background-color: tomato;
+  border: solid 2px white;
+  padding:1%;
+  border-radius: 2%;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  border: solid 1px white;
+  color: white;
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+.input-group .button-minus,
+.input-group .button-plus :hover{
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button-plus {
+  left: -13px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type="number"] {
+  font-size: 18px;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+input[type=submit]{
+    font-size: 20px;
+    border : 2px solid white;
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2%;
+}
+input[type=submit]:hover{
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+img {
+    border: 20px solid white;
+    width: 250px;
+    border-radius: 1%;
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color:darkcyan;
+    border : 2px solid white;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  #navbar a:hover {
+      background-color: midnightblue;
+    color: white;
+    font-size: 25px;
+    padding: 10px 24px;
+    border : 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .heading{
+    color: white;
+    font-size: 40px;
+    background-color: tomato;
+    border: solid 2px white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .Now{
+    animation: glowing 1300ms infinite;
+    background-color: limegreen;
+    font-size: 20px;
+    color: white;
+    padding: 10px 24px;
+    border : 2px solid white;
+    border-radius: 2.5%;
+  }
+  .Now:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  @keyframes glowing {
+    0% { background-color: #2ba805; box-shadow: 0 0 5px #2ba805; }
+    50% { background-color: #49e819; box-shadow: 0 0 20px #49e819; }
+    100% { background-color: #2ba805; box-shadow: 0 0 5px #2ba805; }
+    }
