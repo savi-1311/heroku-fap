@@ -4,6 +4,7 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .zone {
     /*padding:30px 50px;*/
     color:#FFF;
@@ -33,6 +34,7 @@ body{
     background: linear-gradient(top, rgb(42, 231, 93) 0%,#a5c956 100%); /* W3C */
 }
 
+
 .div{
     z-index : -1;
     width : 100%;
@@ -45,6 +47,7 @@ body{
     align-items: center;
     opacity : 0.9;
 }
+
 
 .a{
     text-align: center;
