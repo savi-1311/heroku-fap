@@ -3,6 +3,7 @@ body{
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 .zone {
     /*padding:30px 50px;*/
     color:#FFF;
@@ -31,6 +32,7 @@ body{
     background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top, rgb(42, 231, 93) 0%,#a5c956 100%); /* W3C */
 }
+
 .div{
     z-index : -1;
     width : 100%;
@@ -43,6 +45,7 @@ body{
     align-items: center;
     opacity : 0.9;
 }
+
 .a{
     text-align: center;
     border : 2px solid white;
@@ -64,6 +67,7 @@ body{
     padding : 40px;
 
 }
+
 .logout{
     background-color: rgb(236, 70, 19); 
     color: WHITE; 
@@ -81,10 +85,12 @@ body{
     font-weight: bold;
     border-radius: 5px;;
   }
+
   .logout:hover{
     background-color: #eeeded ;
     color: black;
   }
+
   .menu{
     background-color: rgb(162, 201, 20); 
     color: WHITE; 
@@ -101,6 +107,7 @@ body{
     font-weight: bold;
     border-radius: 5px;;
   }
+
   .menu:hover{
     background-color: #eeeded ;
     color: black;
